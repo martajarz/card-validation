@@ -1,9 +1,9 @@
-var number; // get from user
-var numbers[];
+var number = "378282246310005"; // get from user
+var numbers = [];
 var sum = 0;
 
-n = number;
-l = number.length;
+var n = number;
+var l = number.length;
 
 for (i = 1; i < l; i++) {
     numbers[i] = (n % 10);
@@ -34,7 +34,7 @@ if (sum % 10 == 0) {
                 console.log("AMEX");
             }
         }
-    } else if (l == 13 && check1 = 4) {
+    } else if (l == 13 && check1 == 4) {
         console.log("VISA")
     } else if (l == 16) {
         if (check1 == 4) {
