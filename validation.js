@@ -5,16 +5,16 @@ var sum = 0;
 var n = number;
 var l = number.length;
 
-for (i = 1; i < l; i++) {
+for (i = 0; i < l; i++) {
     numbers[i] = (n % 10);
-    n = n / 10;
+    n = Math.floor(n / 10);
 }
 
 for (i = 1; i < l; i = i + 2) {
     var n2 = numbers[i] * 2;
 
     if (n2 >= 10) {
-        sum = sum + (n2 % 10) + (n2 / 10);
+        sum = sum + (n2 % 10) + Math.floor(n2 / 10);
     } else {
         sum = sum + n2;
     }
