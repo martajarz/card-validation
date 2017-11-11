@@ -41,9 +41,7 @@ function check() {
             var check1 = numbers[length - 1];
             var check2 = numbers[length - 2];
             
-            html = if_visa(length, check1, check2);
-            html = if_mastercard(length, check1, check2);
-            html = if_amex(length, check1, check2);
+            html = company_check(length, check1, check2);
             
             if (html == undefined) {
                 html = "zzzzInvalid card number";
@@ -56,28 +54,23 @@ function check() {
     document.getElementById('result').innerHTML = html;
 }
 
-function if_visa(l, c1, c2) {
-    if (l == 13 || l == 16) {
+function company_check(l, c1, c2) {
+    if (l == 13) {
         if (c1 == 4) {
-            html = "VISA";
-            return;
+            return "VISA";
         }
     } 
-}
-
-function if_mastercard (l, c1, c2) {
-    if (l == 16) {
-        if (c1 == 5) {
+    else if (l == 16) {
+        if (c1 == 4) {
+            return "VISA";
+        }
+        else if (c1 == 5) {
             if (c2 == 1 || c2 == 2 || c2 == 3 || c2 == 4 || c2 == 5) {
-                html = "MASTERCARD";
-                return;
+                return "MASTERCARD";
             }
         }
     }
-}
-
-function if_amex (l, c1, c2) {
-    if (l == 15) {
+    else if (l == 15) {
         if (c1 == 3) {
             if (c2 == 4 || c2 == 7) {
                 return "AMEX";
