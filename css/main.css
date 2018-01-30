@@ -1,5 +1,5 @@
 body {
-    background-image: url("images/bg.jpg");
+    background-image: url("../images/bg.jpg");
 }
 
 .card {
@@ -11,7 +11,18 @@ body {
     left: 0;
     width: 856px;
     height: 540px;
-
     border-radius: 25px;
-    border: 5px solid #000000;
+    border: none;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+.card_front {
+    padding: 20px;
+    position: absolute;
+    margin: auto; 
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+} 

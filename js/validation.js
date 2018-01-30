@@ -6,6 +6,9 @@ function check() {
     if (isNaN(cardNumber)) {
         html = "Input should be a number"
     }
+    else if (cardNumber == "") {
+        html = "Please enter a number"
+    }
     else {
         var length = 1;
         var numbers = [];
